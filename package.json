@@ -1,0 +1,25 @@
+{
+  "name": "customers-manager-service",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cron": "^1.4.1",
+    "@elysiajs/jwt": "^1.4.0",
+    "@formkit/tempo": "^0.1.2",
+    "elysia": "latest",
+    "stripe": "^18.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "bun-types": "latest",
+    "eslint": "^9.37.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.0"
+  },
+  "module": "src/index.js"
+}

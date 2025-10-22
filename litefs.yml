@@ -1,0 +1,11 @@
+fuse:
+  dir: "/litefs"
+
+data:
+  dir: "/var/lib/litefs"
+
+exec:
+  - cmd: "/app/server"
+
+lease:
+  type: "static"

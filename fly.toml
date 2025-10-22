@@ -1,0 +1,39 @@
+# fly.toml app configuration file generated for customers-manager-service on 2025-07-14T15:34:13-06:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'customers-manager-service'
+primary_region = 'dfw'
+
+[build]
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'off'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 2
+
+[mounts]
+  source = "litefs_data"
+  destination = "/var/lib/litefs"
+
+[env]
+  ENVIRONMENT = "production"
+  PORT = "3000"
+  DB_URL = "/litefs/db.sqlite"
+  LITEFS_CANDIDATE = "true"
+  FACTURA_GENERIC_CLIENT_ID = "687d6f40e3596"
+  ADMIN_EMAIL_ADDRESS = "email@example.com"
+  CLIENT_URL = "https://your-domain.com"
+  TERMS_V = "v1"
+  TERMS_HASH = "00aa3191fed40b55337f1d2e1f5e4cf08ab0a4872f2b9bd4dd332499c4b18b1a"
+  POLICIES_V = "v1"
+  POLICIES_HASH = "bcdcec94285349b3e67b0249462b27b0566872c7d1149b18519ba83777e578eb"

@@ -1,0 +1,17 @@
+// prettier.config.js, .prettierrc.js, prettier.config.mjs, or .prettierrc.mjs
+
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+const config = {
+  arrowParens: 'avoid',
+  singleQuote: true,
+  bracketSpacing: true,
+  endOfLine: 'lf',
+  semi: false,
+  tabWidth: 2,
+  trailingComma: 'none'
+}
+
+export default config
